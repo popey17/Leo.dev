@@ -1,0 +1,43 @@
+//文字コードはutf-8
+@charset "UTF-8";
+
+// 使用変数
+//===================================================================
+
+// 画像ディレクトリ
+$dir_img: "/assets/img/";
+
+// ブレークポイント
+$bp_pc_min: 1440px;
+$bp_tablet_max: 1000px;
+$bp_tablet_min: 769px;
+$bp_smartphone_max: 768px;
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+$fontface_default: "Montserrat", sans-serif;
+$fontface_pacifico: "Pacifico", cursive;
+$fontface_pirata: "Pirata One", system-ui;
+$fontface_round: "Varela Round", sans-serif;
+
+
+// テキストカラー
+$base_text_color: #333;
+$strong_text_color: #ED6E20;
+
+
+//コンテンツ幅
+$base_content_width: 1280px;
+
+
+//class名の接頭辞
+$prefix_mod: ".mod";
+
+
+//カラー
+:root {
+  --white: #fff;
+}

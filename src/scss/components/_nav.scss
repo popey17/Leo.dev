@@ -1,0 +1,80 @@
+@use "../global" as g;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3%;
+  padding-block: 1rem;
+  line-height: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  
+  &__logo {
+    h1 {
+      display: flex;
+      align-items: flex-end;
+      .left {
+        @include g.fontsize(36);
+        font-family: g.$fontface_pirata;
+        // font-style: italic;
+        letter-spacing: 0.1rem;
+      }
+      .dot {
+        @include g.fontsize(36);
+        font-family: g.$fontface_round;
+        font-weight: normal;
+      }
+      .right {
+        font-family: g.$fontface_round;
+        font-weight: 700;
+        @include g.fontsize(30);
+        letter-spacing: -0.05rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow-y: clip;
+        span{
+          &:nth-child(2){
+            position: absolute;
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+  &__clock {
+    position: absolute;
+    right: 50%;
+    bottom: 40%;
+    transform: translate(50%, 50%);
+    font-family: g.$fontface_pirata;
+    font-weight: 700;
+    @include g.fontsize(16);
+    letter-spacing: 0.2rem;
+    pointer-events: none;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    &__time {
+      @include g.fontsize(14);
+    }
+  }
+  &__menu {
+    font-weight: bold;
+    ul {
+      display: flex;
+      gap: 1.5rem;
+      line-height: 1;
+      align-items: center;
+    }
+  }
+}
