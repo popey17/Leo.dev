@@ -1,0 +1,40 @@
+@use "../global" as g;
+
+.hero {
+  height: 100dvh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  &__inner {
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 20px;
+    justify-content: center;
+    &--top {
+      margin-right: 15%;
+      .hero__text__small {
+        text-align: right;
+      }
+    }
+    &--mid {
+      p {
+        word-break: keep-all;
+      }
+    }
+    &--bot {
+      justify-content: center;
+    }
+    &__large {
+      font-size: 12vw;
+      // letter-spacing: -0.05em;
+    }
+    &__small {
+      width: 20%;
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+  }
+}
