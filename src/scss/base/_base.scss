@@ -10,8 +10,9 @@
 html{
   // font-size: 62.5%;
   scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased; 
-  -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased; 
+  // -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
   @include g.media_queries{
     scroll-padding-top: 10em;
   }
@@ -23,8 +24,8 @@ body {
   letter-spacing: 0px;
   color: #333;
   word-break: break-all;
-  font-weight: 500;
   margin: 0;
+  overflow-x: clip;
   // overscroll-behavior: none;
   @include g.fontsize(16);
   &.scrollLock {

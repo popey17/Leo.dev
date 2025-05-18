@@ -1,5 +1,5 @@
 import Nav from "@/components/nav/Nav";
-import Hero from "@/components/Hero";
+import Hero from "@/components/hero/Hero";
 
 
 export default function Home() {
@@ -7,6 +7,9 @@ export default function Home() {
     <div>
       <Nav />
       <Hero />
+      <div className="modDemoDiv">
+
+      </div>
     </div>
   );
 }

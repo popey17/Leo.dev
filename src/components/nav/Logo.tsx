@@ -9,32 +9,29 @@ const Logo = () => {
   gsap.registerPlugin(SplitText) 
   
   useGSAP(() => {
-    let text = gsap.utils.toArray<HTMLSpanElement>(".right span")
+    document.fonts.ready.then(() => {
+      let text = gsap.utils.toArray<HTMLSpanElement>(".right span")
 
-    text.forEach((item) => {
-      let split = SplitText.create(item, { type: "chars" });
-      
-      logo.current?.addEventListener("mouseover",()=>{
-        gsap.to(split.chars,{
-          yPercent: -100,
-          duration: 0.5,
-          stagger: 0.05,
+      text.forEach((item) => {
+        let split = SplitText.create(item, { type: "chars" });
+
+        logo.current?.addEventListener("mouseover", () => {
+          gsap.to(split.chars, {
+            yPercent: -100,
+            duration: 0.5,
+            stagger: 0.05,
+          })
+        })
+        logo.current?.addEventListener("mouseout", () => {
+          gsap.to(split.chars, {
+            yPercent: 0,
+            duration: 0.5,
+            stagger: 0.05,
+          })
         })
       })
-      logo.current?.addEventListener("mouseout",()=>{
-        gsap.to(split.chars,{
-          yPercent: 0,
-          duration: 0.5,
-          stagger: 0.05,
-        })
-      })
-    })
-
-
-
+    });
   })
-
-
 
   return (
     <a href='/' className="nav__logo" ref={logo}>

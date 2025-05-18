@@ -27,7 +27,7 @@ const clock = () => {
 
   return (
     <div className='nav__clock'>
-      <span className='nav__clock__country'>Thailand, TH
+      <span className='nav__clock__country'>Bangkok, TH
       </span>
       <span className='nav__clock__time'>
       {time}

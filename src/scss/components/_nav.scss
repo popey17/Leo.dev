@@ -54,10 +54,10 @@
     right: 50%;
     bottom: 40%;
     transform: translate(50%, 50%);
-    font-family: g.$fontface_pirata;
+    font-family: g.$fontface_cinzel;
     font-weight: 700;
-    @include g.fontsize(16);
-    letter-spacing: 0.2rem;
+    @include g.fontsize(15);
+    letter-spacing: 0.05rem;
     pointer-events: none;
     line-height: 1;
     display: flex;

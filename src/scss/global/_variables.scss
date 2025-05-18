@@ -14,14 +14,20 @@ $bp_tablet_min: 769px;
 $bp_smartphone_max: 768px;
 
 // font
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+
+
 
 $fontface_default: "Montserrat", sans-serif;
-$fontface_pacifico: "Pacifico", cursive;
 $fontface_pirata: "Pirata One", system-ui;
 $fontface_round: "Varela Round", sans-serif;
+$fontface_cinzel: "Cinzel", serif;
+$fontface_playfair: "Playfair", serif;
 
 
 // テキストカラー

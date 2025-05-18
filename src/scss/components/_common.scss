@@ -1,31 +1,58 @@
 @use "../global" as g;
 
-#{g.$prefix_mod}{
-  &Bp{
-    &Pc{
-      @include g.media_queries(pc){
+#{g.$prefix_mod} {
+  &Bp {
+    &Pc {
+      @include g.media_queries(pc) {
         display: inherit;
       }
-      @include g.media_queries{
+      @include g.media_queries {
         display: none !important;
       }
     }
-    &Tp{
-      @include g.media_queries(pc){
+    &Tp {
+      @include g.media_queries(pc) {
         display: inherit;
       }
-      @media screen and (max-width: 1000px){
+      @media screen and (max-width: 1000px) {
         display: none !important;
       }
     }
-    &Sp{
-      @include g.media_queries(pc){
+    &Sp {
+      @include g.media_queries(pc) {
         display: none !important;
       }
-      @include g.media_queries{
+      @include g.media_queries {
         display: inherit;
       }
     }
   }
-  
+  &ContactFloat {
+    position: fixed;
+    bottom: 2vw;
+    width: 150px;
+    height: 150px;
+    right: 2vw;
+    z-index: 100;
+    .video__container {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    svg {
+      // opacity: 0;
+    }
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-48%, -45%);
+      // width: 130% !important;
+    }
+  }
+  &DemoDiv {
+    height: 2000px;
+  }
 }
