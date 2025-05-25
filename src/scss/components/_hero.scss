@@ -5,8 +5,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  &__inner {
-  }
+  font-family: g.$fontface_montserrat;
   &__text {
     display: flex;
     align-items: center;
@@ -15,6 +14,7 @@
     justify-content: center;
     transform: translateY(100%);
     opacity: 0;
+    filter: blur(10px);
     * {
       cursor: default;
     }
@@ -41,6 +41,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 100;
       }
       svg {
         opacity: 0;
@@ -54,6 +55,8 @@
       }
     }
     &--top {
+      position: relative;
+      z-index: 100;
       .hero__text__small {
         text-align: right;
       }
@@ -66,7 +69,7 @@
     &--bot {
       justify-content: center;
       font-family: g.$fontface_playfair;
-      p {
+      .hero__text__large{
         font-size: 14vw;
       }
     }

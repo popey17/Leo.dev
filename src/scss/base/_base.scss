@@ -22,9 +22,10 @@ body {
   font-family: g.$fontface_default;
   line-height: 1.8;
   letter-spacing: 0px;
-  color: #333;
+  color: #000;
   word-break: break-all;
   margin: 0;
+  background: var(--white);
   overflow-x: clip;
   // overscroll-behavior: none;
   @include g.fontsize(16);

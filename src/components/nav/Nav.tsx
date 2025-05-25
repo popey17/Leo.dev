@@ -3,7 +3,7 @@ import Clock from "./Clock"
 
 const Nav = () => {
   return (
-    <nav className='nav'>
+    <div className='nav'>
       <Logo />
       <Clock />
       <div className="nav__menu">
@@ -13,7 +13,7 @@ const Nav = () => {
           <li><a href="/">Contact</a></li>
         </ul>
       </div>
-    </nav>
+    </div>
   )
 }
 

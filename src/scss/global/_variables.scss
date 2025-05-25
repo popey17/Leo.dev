@@ -21,17 +21,34 @@ $bp_smartphone_max: 768px;
 @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
 
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/ppneuemontreal-book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PPNeueMontreal500";
+  src: url("/fonts/ppneuemontreal-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PPNeueMontreal700";
+  src: url("/fonts/ppneuemontreal-bold.woff") format("woff");
+}
 
 
-$fontface_default: "Montserrat", sans-serif;
+
+$fontface_default: "PPNeueMontreal500", sans-serif;
+$fontface_montserrat: "Montserrat", sans-serif;
 $fontface_pirata: "Pirata One", system-ui;
 $fontface_round: "Varela Round", sans-serif;
 $fontface_cinzel: "Cinzel", serif;
 $fontface_playfair: "Playfair", serif;
 
 
+
 // テキストカラー
-$base_text_color: #333;
+$base_text_color: #000;
 $strong_text_color: #ED6E20;
 
 
@@ -42,6 +59,10 @@ $base_content_width: 1280px;
 //class名の接頭辞
 $prefix_mod: ".mod";
 
+
+//textSize
+$h2: 8vw;
+$text : 1.5vw;
 
 //カラー
 :root {

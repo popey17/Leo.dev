@@ -34,6 +34,7 @@
     height: 150px;
     right: 2vw;
     z-index: 100;
+    visibility: hidden;
     .video__container {
       width: 150px;
       height: 150px;
@@ -42,17 +43,48 @@
       left: 0;
     }
     svg {
-      // opacity: 0;
+      text {
+        textPath {
+          fill: var(--white);
+          mix-blend-mode: difference;
+        }
+      }
     }
     video {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-48%, -45%);
-      // width: 130% !important;
     }
   }
   &DemoDiv {
     height: 2000px;
+    background: #000;
+  }
+  &SectionTitle {
+    font-size: g.$h2;
+    // letter-spacing: -0.05em;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    // font-family: g.$fontface_playfair;
+    font-family: PPNeueMontreal500;
+    font-weight: 600;
+    display: flex;
+    position: relative;
+    overflow-Y: clip;
+    span {
+      &:nth-child(1) {
+        color: #0000;
+        -webkit-text-stroke-width: 0.2vw;
+        -webkit-text-stroke-color: g.$base_text_color;
+        font-weight: 500;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 100%;
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 "use client"
 import ContactIcon from "./ContactIcon"
-import { use, useRef } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger, Flip } from "gsap/all";
@@ -14,7 +14,6 @@ const Hero = () => {
   const contactContainerRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLDivElement>(null);
 
-
   useGSAP(() => {
     const textElement = gsap.utils.toArray<HTMLDivElement>(".hero__text:not(.hero__text--note)");
     const noteElement = gsap.utils.toArray<HTMLDivElement>(".hero__text.hero__text--note");
@@ -26,21 +25,23 @@ const Hero = () => {
       .to(textElement, {
         yPercent: -100,
         ease: "power2.inOut",
-        duration: 2,
+        duration: 1,
         opacity: 1,
-        stagger: 0.2
+        stagger: 0.2,
+        filter: "blur(0px)",
       })
       .to(noteElement, {
         opacity: 1,
         xPercent: 20,
-      })
+        filter: "blur(0px)",
+      }, "-=0.5")
       .to(contactContainerRef.current, {
         width: "15vw",
         ease: "power2.inOut",
         duration: 1
       }, "<");
     const videoElement = contactRef.current?.querySelector("video");
-    if (videoElement) {
+    if (videoElement && window.scrollY < (window.innerHeight * 0.1)) {
       tl.to(videoElement, {
         width: "30vw",
         ease: "power2.inOut",
@@ -58,6 +59,7 @@ const Hero = () => {
       end: "bottom 80%",
       // markers: true,
       onEnter: () => {
+
         if (modContactFloat && contactRef.current?.parentNode !== modContactFloat) {
           const state = Flip.getState(contactRef.current);
 
@@ -68,11 +70,14 @@ const Hero = () => {
             duration: 1.5,
             ease: "power2.inOut",
             onStart: () => {
-                gsap.to(".video__container video", {
-                  width: "130%",
-                  duration: 1
-                })
-            }
+              gsap.to(".video__container video", {
+                width: "130%",
+                duration: 1
+              })
+              gsap.to(".modContactFloat", {
+                visibility: "visible"
+              })
+            },
           });
         }
       },
@@ -88,10 +93,13 @@ const Hero = () => {
             duration: 1.5,
             ease: "power2.inOut",
             onStart: () => {
-                gsap.to(".video__container video", {
-                  width: "30vw",
-                  duration: 1
-                })
+              gsap.to(".video__container video", {
+                width: "30vw",
+                duration: 1
+              })
+              gsap.to(".modContactFloat", {
+                visibility: "hidden"
+              })
             }
           });
         }
@@ -118,7 +126,7 @@ const Hero = () => {
           <p className='hero__text__small'>Great web development starts where clean code meets clear design.</p>
         </div>
         <div className='hero__text hero__text--bot'>
-          <p className='hero__text__large'>DEVELOP</p>
+          <h1 className='hero__text__large'>DEVELOP</h1>
         </div>
         <div className='hero__text hero__text--note'>
           <p className='hero__text__small'>I'm currently in <span>Bangkok, Th</span></p>
