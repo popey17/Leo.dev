@@ -17,14 +17,32 @@ const About = () => {
             </h3>
             <div className="about__content__content">
               <p>
-                Hi, I'm <span>LEO</span> — a Web Developer who enjoys building beautiful, functional, and user-friendly websites. I focus on turning ideas into interactive digital experiences, whether it's a sleek landing page, a dynamic web app, or engaging web animations.
+                Hi, I'm <span>LEO</span> — a <span>Web Developer</span> who enjoys building beautiful, functional, and user-friendly websites. I focus on turning ideas into interactive digital experiences, whether it's a sleek landing page, a dynamic web app, or engaging web animations.
               </p>
               <p>
-                I enjoy traveling and meeting new people — making every corner of the world my workplace. When I’m not coding, you'll find me exploring new cultures and chasing fresh experiences.
+                I enjoy traveling and meeting new people — which make <span>"every corner of the world my workplace"</span>. When I’m not coding, you'll find me exploring new cultures and chasing fresh experiences.
+              </p>
+              <div>
+                here lie scroller
+              </div>
+            </div>
+          </div>
+        </section>
+        <AboutBgImg />
+        <section className="about__content">
+          <div className="about__content__inner">
+            <h3 className="about__content__title">
+              Education
+            </h3>
+            <div className="about__content__content">
+              <p>
+                Hi, I'm <span>LEO</span> — a <span>Web Developer</span> who enjoys building beautiful, functional, and user-friendly websites. I focus on turning ideas into interactive digital experiences, whether it's a sleek landing page, a dynamic web app, or engaging web animations.
+              </p>
+              <p>
+                I enjoy traveling and meeting new people — which make <span>"every corner of the world my workplace"</span>. When I’m not coding, you'll find me exploring new cultures and chasing fresh experiences.
               </p>
 
             </div>
-            <AboutBgImg />
           </div>
         </section>
       </div>
